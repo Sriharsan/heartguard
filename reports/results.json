@@ -1,0 +1,1036 @@
+{
+  "timestamp": "2026-04-07T04:12:20.910306",
+  "elapsed_sec": 102.02,
+  "data_stats": {
+    "total": 1025,
+    "positive": 524,
+    "negative": 501
+  },
+  "eda": {
+    "age": {
+      "label": "Age",
+      "mean": 53.14,
+      "std": 14.198,
+      "min": 29.0,
+      "max": 77.0
+    },
+    "sex": {
+      "label": "Sex",
+      "mean": 0.476,
+      "std": 0.5,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "cp": {
+      "label": "Chest Pain Type",
+      "mean": 1.479,
+      "std": 1.137,
+      "min": 0.0,
+      "max": 3.0
+    },
+    "trestbps": {
+      "label": "Resting BP",
+      "mean": 147.006,
+      "std": 30.286,
+      "min": 94.0,
+      "max": 200.0
+    },
+    "chol": {
+      "label": "Cholesterol",
+      "mean": 346.016,
+      "std": 129.089,
+      "min": 126.0,
+      "max": 564.0
+    },
+    "fbs": {
+      "label": "Fasting Blood Sugar",
+      "mean": 0.519,
+      "std": 0.5,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "restecg": {
+      "label": "Resting ECG",
+      "mean": 1.004,
+      "std": 0.818,
+      "min": 0.0,
+      "max": 2.0
+    },
+    "thalach": {
+      "label": "Max Heart Rate",
+      "mean": 137.383,
+      "std": 37.638,
+      "min": 71.0,
+      "max": 202.0
+    },
+    "exang": {
+      "label": "Exercise Angina",
+      "mean": 0.532,
+      "std": 0.499,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "oldpeak": {
+      "label": "ST Depression",
+      "mean": 3.126,
+      "std": 1.727,
+      "min": 0.0,
+      "max": 6.2
+    },
+    "slope": {
+      "label": "ST Slope",
+      "mean": 1.022,
+      "std": 0.806,
+      "min": 0.0,
+      "max": 2.0
+    },
+    "ca": {
+      "label": "Major Vessels",
+      "mean": 1.951,
+      "std": 1.427,
+      "min": 0.0,
+      "max": 4.0
+    },
+    "thal": {
+      "label": "Thalassemia",
+      "mean": 5.394,
+      "std": 1.704,
+      "min": 3.0,
+      "max": 7.0
+    }
+  },
+  "age_dist": [
+    {
+      "group": "20s",
+      "total": 16,
+      "disease": 5
+    },
+    {
+      "group": "30s",
+      "total": 214,
+      "disease": 67
+    },
+    {
+      "group": "40s",
+      "total": 208,
+      "disease": 75
+    },
+    {
+      "group": "50s",
+      "total": 212,
+      "disease": 98
+    },
+    {
+      "group": "60s",
+      "total": 199,
+      "disease": 144
+    },
+    {
+      "group": "70s",
+      "total": 176,
+      "disease": 135
+    }
+  ],
+  "correlation": {
+    "age": 0.3633,
+    "sex": 0.4476,
+    "cp": -0.2336,
+    "trestbps": 0.3017,
+    "chol": 0.2667,
+    "fbs": -0.0233,
+    "restecg": -0.024,
+    "thalach": 0.0052,
+    "exang": -0.018,
+    "oldpeak": 0.0224,
+    "slope": -0.0115,
+    "ca": 0.0434,
+    "thal": -0.0662
+  },
+  "models": [
+    {
+      "model": "Logistic Regression",
+      "auc": 0.9393,
+      "pr_auc": 0.9467,
+      "accuracy": 0.8225,
+      "f1": 0.822,
+      "precision": 0.8274,
+      "recall": 0.8225,
+      "confusion": {
+        "tp": 66,
+        "tn": 73,
+        "fp": 10,
+        "fn": 20
+      }
+    },
+    {
+      "model": "Random Forest",
+      "auc": 1.0,
+      "pr_auc": 1.0,
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "confusion": {
+        "tp": 86,
+        "tn": 83,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "model": "GBT",
+      "auc": 1.0,
+      "pr_auc": 1.0,
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "confusion": {
+        "tp": 86,
+        "tn": 83,
+        "fp": 0,
+        "fn": 0
+      }
+    }
+  ],
+  "roc_curves": {
+    "Logistic Regression": [
+      {
+        "fpr": 0.0,
+        "tpr": 0.0
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.0349
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.0698
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.1047
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.1395
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.1744
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.2093
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.2442
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.2791
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.314
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.3488
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.3837
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.4186
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.4535
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.4884
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.5233
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.5581
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.593
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.6279
+      },
+      {
+        "fpr": 0.0241,
+        "tpr": 0.6395
+      },
+      {
+        "fpr": 0.0241,
+        "tpr": 0.6744
+      },
+      {
+        "fpr": 0.0482,
+        "tpr": 0.686
+      },
+      {
+        "fpr": 0.0602,
+        "tpr": 0.7093
+      },
+      {
+        "fpr": 0.0843,
+        "tpr": 0.7209
+      },
+      {
+        "fpr": 0.0843,
+        "tpr": 0.7558
+      },
+      {
+        "fpr": 0.1084,
+        "tpr": 0.7674
+      },
+      {
+        "fpr": 0.1325,
+        "tpr": 0.7791
+      },
+      {
+        "fpr": 0.1446,
+        "tpr": 0.8023
+      },
+      {
+        "fpr": 0.1566,
+        "tpr": 0.8256
+      },
+      {
+        "fpr": 0.1566,
+        "tpr": 0.8605
+      },
+      {
+        "fpr": 0.1687,
+        "tpr": 0.8837
+      },
+      {
+        "fpr": 0.1807,
+        "tpr": 0.907
+      },
+      {
+        "fpr": 0.2048,
+        "tpr": 0.9186
+      },
+      {
+        "fpr": 0.2289,
+        "tpr": 0.9302
+      },
+      {
+        "fpr": 0.2651,
+        "tpr": 0.9302
+      },
+      {
+        "fpr": 0.2892,
+        "tpr": 0.9419
+      },
+      {
+        "fpr": 0.3253,
+        "tpr": 0.9419
+      },
+      {
+        "fpr": 0.3614,
+        "tpr": 0.9419
+      },
+      {
+        "fpr": 0.3735,
+        "tpr": 0.9651
+      },
+      {
+        "fpr": 0.4096,
+        "tpr": 0.9651
+      },
+      {
+        "fpr": 0.4337,
+        "tpr": 0.9767
+      },
+      {
+        "fpr": 0.4578,
+        "tpr": 0.9884
+      },
+      {
+        "fpr": 0.494,
+        "tpr": 0.9884
+      },
+      {
+        "fpr": 0.5181,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.5542,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.5904,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.6265,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.6627,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.6988,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.7349,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.7711,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.8072,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.8434,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.8795,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.9157,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.9518,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.988,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 1.0,
+        "tpr": 1.0
+      }
+    ],
+    "Random Forest": [
+      {
+        "fpr": 0.0,
+        "tpr": 0.0
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.0349
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.0698
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.1047
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.1395
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.1744
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.2093
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.2442
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.2791
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.314
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.3488
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.3837
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.4186
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.4535
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.4884
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.5233
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.5581
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.593
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.6279
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.6628
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.6977
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.7326
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.7674
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.8023
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.8372
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.8721
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.907
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.9419
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.9767
+      },
+      {
+        "fpr": 0.012,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.0482,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.0843,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.1205,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.1566,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.1928,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.2289,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.2651,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.3012,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.3373,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.3735,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.4096,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.4458,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.4819,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.5181,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.5542,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.5904,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.6265,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.6627,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.6988,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.7349,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.7711,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.8072,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.8434,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.8795,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.9157,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.9518,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.988,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 1.0,
+        "tpr": 1.0
+      }
+    ],
+    "Gradient Boosted Trees": [
+      {
+        "fpr": 0.0,
+        "tpr": 0.0
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.0349
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.0698
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.1047
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.1395
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.1744
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.2093
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.2442
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.2791
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.314
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.3488
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.3837
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.4186
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.4535
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.4884
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.5233
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.5581
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.593
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.6279
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.6628
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.6977
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.7326
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.7674
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.8023
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.8372
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.8721
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.907
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.9419
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.9767
+      },
+      {
+        "fpr": 0.012,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.0482,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.0843,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.1205,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.1566,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.1928,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.2289,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.2651,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.3012,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.3373,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.3735,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.4096,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.4458,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.4819,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.5181,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.5542,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.5904,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.6265,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.6627,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.6988,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.7349,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.7711,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.8072,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.8434,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.8795,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.9157,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.9518,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.988,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 1.0,
+        "tpr": 1.0
+      }
+    ]
+  },
+  "feature_importance": {
+    "Random Forest": [
+      {
+        "feature": "Age",
+        "key": "age",
+        "importance": 0.211058
+      },
+      {
+        "feature": "Sex",
+        "key": "sex",
+        "importance": 0.218206
+      },
+      {
+        "feature": "Chest Pain Type",
+        "key": "cp",
+        "importance": 0.098583
+      },
+      {
+        "feature": "Resting BP",
+        "key": "trestbps",
+        "importance": 0.19018
+      },
+      {
+        "feature": "Cholesterol",
+        "key": "chol",
+        "importance": 0.138364
+      },
+      {
+        "feature": "Fasting Blood Sugar",
+        "key": "fbs",
+        "importance": 0.010137
+      },
+      {
+        "feature": "Resting ECG",
+        "key": "restecg",
+        "importance": 0.009855
+      },
+      {
+        "feature": "Max Heart Rate",
+        "key": "thalach",
+        "importance": 0.036701
+      },
+      {
+        "feature": "Exercise Angina",
+        "key": "exang",
+        "importance": 0.007736
+      },
+      {
+        "feature": "ST Depression",
+        "key": "oldpeak",
+        "importance": 0.034259
+      },
+      {
+        "feature": "ST Slope",
+        "key": "slope",
+        "importance": 0.012449
+      },
+      {
+        "feature": "Major Vessels",
+        "key": "ca",
+        "importance": 0.018661
+      },
+      {
+        "feature": "Thalassemia",
+        "key": "thal",
+        "importance": 0.013811
+      }
+    ],
+    "Gradient Boosted Trees": [
+      {
+        "feature": "Age",
+        "key": "age",
+        "importance": 0.219227
+      },
+      {
+        "feature": "Sex",
+        "key": "sex",
+        "importance": 0.194803
+      },
+      {
+        "feature": "Chest Pain Type",
+        "key": "cp",
+        "importance": 0.188355
+      },
+      {
+        "feature": "Resting BP",
+        "key": "trestbps",
+        "importance": 0.181568
+      },
+      {
+        "feature": "Cholesterol",
+        "key": "chol",
+        "importance": 0.174674
+      },
+      {
+        "feature": "Fasting Blood Sugar",
+        "key": "fbs",
+        "importance": 0.000539
+      },
+      {
+        "feature": "Resting ECG",
+        "key": "restecg",
+        "importance": 0.003016
+      },
+      {
+        "feature": "Max Heart Rate",
+        "key": "thalach",
+        "importance": 0.017581
+      },
+      {
+        "feature": "Exercise Angina",
+        "key": "exang",
+        "importance": 3.9e-05
+      },
+      {
+        "feature": "ST Depression",
+        "key": "oldpeak",
+        "importance": 0.010696
+      },
+      {
+        "feature": "ST Slope",
+        "key": "slope",
+        "importance": 0.000454
+      },
+      {
+        "feature": "Major Vessels",
+        "key": "ca",
+        "importance": 0.004398
+      },
+      {
+        "feature": "Thalassemia",
+        "key": "thal",
+        "importance": 0.004649
+      }
+    ]
+  }
+}
