@@ -1,129 +1,107 @@
-#!/bin/bash
-# ============================================================
-# HeartGuard - Full Stack Launch Script
-# Usage: bash run.sh [pipeline|api|frontend|all]
-# ============================================================
+#!/usr/bin/env bash
+# ═══════════════════════════════════════════════════════════════════════════════
+#  VitalFlow – Cardiovascular Risk Analytics Platform
+#  Usage:  bash run.sh [setup|pipeline|api|frontend|all]
+# ═══════════════════════════════════════════════════════════════════════════════
 
-set -e
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$SCRIPT_DIR"
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$ROOT"
 
-RED='\033[0;31m'; GREEN='\033[0;32m'; BLUE='\033[0;34m'
-YELLOW='\033[1;33m'; CYAN='\033[0;36m'; BOLD='\033[1m'; NC='\033[0m'
+R='\033[0;31m'; G='\033[0;32m'; B='\033[0;34m'
+Y='\033[1;33m'; C='\033[0;36m'; W='\033[1m'; N='\033[0m'
 
 banner() {
-  echo ""
-  echo -e "${RED}${BOLD}"
-  echo "  ██╗  ██╗███████╗ █████╗ ██████╗ ████████╗"
-  echo "  ██║  ██║██╔════╝██╔══██╗██╔══██╗╚══██╔══╝"
-  echo "  ███████║█████╗  ███████║██████╔╝   ██║   "
-  echo "  ██╔══██║██╔══╝  ██╔══██║██╔══██╗   ██║   "
-  echo "  ██║  ██║███████╗██║  ██║██║  ██║   ██║   "
-  echo "  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝  "
-  echo -e "${CYAN}  ██████╗ ██╗   ██╗ █████╗ ██████╗ ██████╗"
-  echo "  ██╔════╝ ██║   ██║██╔══██╗██╔══██╗██╔══██╗"
-  echo "  ██║  ███╗██║   ██║███████║██████╔╝██║  ██║"
-  echo "  ██║   ██║██║   ██║██╔══██║██╔══██╗██║  ██║"
-  echo "  ╚██████╔╝╚██████╔╝██║  ██║██║  ██║██████╔╝"
-  echo "   ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ "
-  echo -e "${NC}"
-  echo -e "  ${BOLD}Big Data Analytics · Apache Spark · Heart Disease Prediction${NC}"
-  echo -e "  ${YELLOW}IEEE Project | Full ML Pipeline | LR + RF + GBT Ensemble${NC}"
-  echo ""
+printf "${C}${W}
+  ╔═══════════════════════════════════════════════╗
+  ║   ██╗   ██╗██╗████████╗ █████╗ ██╗            ║
+  ║   ██║   ██║██║╚══██╔══╝██╔══██╗██║            ║
+  ║   ██║   ██║██║   ██║   ███████║██║            ║
+  ║   ╚██╗ ██╔╝██║   ██║   ██╔══██║██║            ║
+  ║    ╚████╔╝ ██║   ██║   ██║  ██║███████╗       ║
+  ║     ╚═══╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝       ║
+  ║        F L O W                                 ║
+  ╠═══════════════════════════════════════════════╣
+  ║  Cardiovascular Risk Analytics · Apache Spark ║
+  ║  Framingham Study · LR + RF + GBT Ensemble   ║
+  ╚═══════════════════════════════════════════════╝
+${N}"
 }
 
 check_deps() {
-  echo -e "${BLUE}[CHECK]${NC} Verifying dependencies..."
-  command -v python3 >/dev/null || { echo -e "${RED}✗ python3 not found${NC}"; exit 1; }
-  command -v java    >/dev/null || { echo -e "${RED}✗ Java not found (required for Spark)${NC}"; exit 1; }
-  python3 -c "import pyspark" 2>/dev/null || { 
-    echo -e "${YELLOW}Installing PySpark...${NC}"
-    pip install pyspark fastapi uvicorn --break-system-packages -q
+  echo -e "${B}[CHECK]${N} Verifying dependencies..."
+  command -v python3 >/dev/null || { echo -e "${R}✗ python3 required${N}"; exit 1; }
+  command -v java    >/dev/null || { echo -e "${R}✗ Java required for Apache Spark${N}"; exit 1; }
+  python3 -c "import pyspark" 2>/dev/null || {
+    echo -e "${Y}  Installing Python dependencies...${N}"
+    pip install pyspark fastapi uvicorn pydantic --break-system-packages -q
   }
-  echo -e "  ${GREEN}✓ Python, Java, PySpark ready${NC}"
+  echo -e "  ${G}✓ Dependencies verified${N}"
+}
+
+setup_data() {
+  echo -e "${B}[DATA]${N} Setting up Framingham dataset..."
+  python3 data/download_data.py
+  echo -e "  ${G}✓ Dataset ready${N}"
 }
 
 run_pipeline() {
-  echo ""
-  echo -e "${BLUE}[SPARK]${NC} ${BOLD}Running ML Pipeline...${NC}"
-  echo -e "  Models: Logistic Regression · Random Forest · GBT"
-  echo -e "  Data:   UCI Heart Disease (1,025 patients)"
+  echo -e "${B}[SPARK]${N} ${W}Launching Apache Spark ML Pipeline...${N}"
+  echo -e "  Dataset : Framingham Heart Study"
+  echo -e "  Models  : Logistic Regression · Random Forest · GBT"
   echo ""
   python3 spark_pipeline/pipeline.py
-  echo -e "\n  ${GREEN}✓ Pipeline complete → reports/results.json${NC}"
+  echo -e "\n  ${G}✓ Pipeline complete → reports/results.json${N}"
 }
 
 run_api() {
-  echo ""
-  echo -e "${BLUE}[API]${NC} ${BOLD}Starting FastAPI server...${NC}"
-  echo -e "  URL: ${CYAN}http://localhost:8000${NC}"
-  echo -e "  Docs: ${CYAN}http://localhost:8000/docs${NC}"
-  echo ""
-  python3 -m uvicorn api.main:app --host 0.0.0.0 --port 8000
+  echo -e "${B}[API]${N} ${W}Starting FastAPI server on :8000${N}"
+  python3 -m uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
 }
 
 run_frontend() {
-  echo ""
-  echo -e "${BLUE}[UI]${NC} ${BOLD}Starting React dashboard...${NC}"
-  echo -e "  URL: ${CYAN}http://localhost:3000${NC}"
-  echo ""
+  echo -e "${B}[UI]${N} ${W}Starting React dashboard on :3000${N}"
   cd frontend
-  if [ ! -d "node_modules" ]; then
-    echo -e "  ${YELLOW}Installing npm packages...${NC}"
-    npm install --silent
-  fi
+  [ ! -d node_modules ] && npm install --silent
   npm start
 }
 
 run_all() {
   banner
   check_deps
+  setup_data
 
-  # Step 1: Pipeline
-  if [ ! -f "reports/results.json" ]; then
-    run_pipeline
-  else
-    echo -e "${GREEN}[SKIP]${NC} Pipeline results already exist (delete reports/results.json to re-run)"
-  fi
+  [ ! -f reports/results.json ] && run_pipeline || \
+    echo -e "${G}[SKIP]${N} Pipeline results cached. Delete reports/results.json to re-run."
 
-  # Step 2: API in background
-  echo ""
-  echo -e "${BLUE}[API]${NC} Starting FastAPI in background..."
+  echo -e "\n${B}[API]${N} Starting backend..."
   python3 -m uvicorn api.main:app --host 0.0.0.0 --port 8000 &
   API_PID=$!
   sleep 2
-  echo -e "  ${GREEN}✓ API running (PID $API_PID) → http://localhost:8000${NC}"
+  echo -e "  ${G}✓ API live → http://localhost:8000/docs  (PID $API_PID)${N}"
 
-  # Step 3: Frontend
   cd frontend
-  if [ ! -d "node_modules" ]; then
-    echo -e "\n${BLUE}[NPM]${NC} Installing packages..."
-    npm install --silent
-  fi
-  echo ""
-  echo -e "${BLUE}[UI]${NC} Starting React dashboard → ${CYAN}http://localhost:3000${NC}"
-  echo ""
-  echo -e "${GREEN}${BOLD}══════════════════════════════════════════════${NC}"
-  echo -e "${GREEN}  ✅ HeartGuard is live at http://localhost:3000${NC}"
-  echo -e "${GREEN}══════════════════════════════════════════════${NC}"
-  echo ""
+  [ ! -d node_modules ] && npm install --silent
+  echo -e "\n${C}${W}══════════════════════════════════════════${N}"
+  echo -e "${G}  ✅  VitalFlow  →  http://localhost:3000${N}"
+  echo -e "${C}${W}══════════════════════════════════════════${N}\n"
   npm start
 
-  # Cleanup
-  kill $API_PID 2>/dev/null
+  kill "$API_PID" 2>/dev/null || true
 }
 
-# ── Entry point ───────────────────────────────────────────────────────────────
 case "${1:-all}" in
-  pipeline)  banner; check_deps; run_pipeline ;;
-  api)       banner; check_deps; run_api ;;
-  frontend)  run_frontend ;;
-  all)       run_all ;;
+  setup)    banner; check_deps; setup_data ;;
+  pipeline) banner; check_deps; run_pipeline ;;
+  api)      banner; check_deps; run_api ;;
+  frontend) run_frontend ;;
+  all)      run_all ;;
   *)
-    echo "Usage: bash run.sh [pipeline|api|frontend|all]"
-    echo "  pipeline  — Run Spark ML training only"
-    echo "  api       — Start FastAPI backend only"
-    echo "  frontend  — Start React dashboard only"
-    echo "  all       — Run everything (default)"
+    echo "Usage: bash run.sh [setup|pipeline|api|frontend|all]"
+    echo "  setup    – Download/generate Framingham dataset"
+    echo "  pipeline – Run Spark ML training"
+    echo "  api      – Start FastAPI backend"
+    echo "  frontend – Start React dashboard"
+    echo "  all      – Full stack (default)"
     ;;
 esac

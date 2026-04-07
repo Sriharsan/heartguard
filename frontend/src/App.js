@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Dashboard from './pages/Dashboard';
-import Predict from './pages/Predict';
-import Models from './pages/Models';
-import EDA from './pages/EDA';
+import Models    from './pages/Models';
+import EDA       from './pages/EDA';
+import Predict   from './pages/Predict';
 import './App.css';
 
 export default function App() {
-  const [page, setPage] = useState('dashboard');
-  const [data, setData] = useState(null);
+  const [page, setPage]     = useState('dashboard');
+  const [data, setData]     = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -17,16 +17,16 @@ export default function App() {
       .catch(() => setLoading(false));
   }, []);
 
-  const pages = [
+  const tabs = [
     { id: 'dashboard', label: 'Overview',   icon: '◈' },
     { id: 'models',    label: 'Models',     icon: '◉' },
     { id: 'eda',       label: 'Analytics',  icon: '◐' },
-    { id: 'predict',   label: 'Predict',    icon: '◎' },
+    { id: 'predict',   label: 'Risk Score', icon: '◎' },
   ];
 
   const renderPage = () => {
-    if (loading) return <Loader />;
-    if (!data)   return <Error />;
+    if (loading) return <div className="center"><div className="spinner"/><p className="load-txt">Connecting to Spark pipeline...</p></div>;
+    if (!data)   return <div className="center"><p style={{color:'#ef4444'}}>⚠ API offline — run: <code>bash run.sh api</code></p></div>;
     switch (page) {
       case 'dashboard': return <Dashboard data={data} />;
       case 'models':    return <Models    data={data} />;
@@ -37,52 +37,27 @@ export default function App() {
   };
 
   return (
-    <div className="app">
+    <>
       <nav className="nav">
         <div className="nav-brand">
-          <span className="brand-icon">♥</span>
-          <span className="brand-name">HeartGuard</span>
-          <span className="brand-sub">BDA · Spark</span>
+          <div className="brand-pulse">♥</div>
+          <span className="brand-name">VitalFlow</span>
+          <span className="brand-tag">CVD · SPARK</span>
         </div>
         <div className="nav-links">
-          {pages.map(p => (
-            <button
-              key={p.id}
-              className={`nav-btn ${page === p.id ? 'active' : ''}`}
-              onClick={() => setPage(p.id)}
-            >
-              <span className="nav-icon">{p.icon}</span>
-              {p.label}
+          {tabs.map(t => (
+            <button key={t.id} className={`nav-btn ${page===t.id?'active':''}`}
+              onClick={() => setPage(t.id)}>
+              <span>{t.icon}</span>{t.label}
             </button>
           ))}
         </div>
         <div className="nav-status">
-          <span className={`status-dot ${data ? 'ok' : 'err'}`}></span>
-          <span className="status-text">{data ? 'Pipeline Ready' : 'Offline'}</span>
+          <div className={`dot ${data?'ok':'err'}`}/>
+          <span>{data ? 'Live' : 'Offline'}</span>
         </div>
       </nav>
-      <main className="main">
-        {renderPage()}
-      </main>
-    </div>
-  );
-}
-
-function Loader() {
-  return (
-    <div className="center-screen">
-      <div className="pulse-ring"></div>
-      <p className="loading-text">Initializing Spark Pipeline...</p>
-    </div>
-  );
-}
-
-function Error() {
-  return (
-    <div className="center-screen">
-      <p style={{color:'#ef4444', fontSize:'1.1rem'}}>
-        ⚠ API offline. Run: <code>python api/main.py</code>
-      </p>
-    </div>
+      <main className="main">{renderPage()}</main>
+    </>
   );
 }

@@ -1,195 +1,256 @@
 {
-  "timestamp": "2026-04-07T04:12:20.910306",
-  "elapsed_sec": 102.02,
+  "timestamp": "2026-04-07T04:59:47.415155",
+  "elapsed_sec": 147.62,
+  "dataset": "Framingham Heart Study",
   "data_stats": {
-    "total": 1025,
-    "positive": 524,
-    "negative": 501
+    "total": 4238,
+    "positive": 2412,
+    "negative": 1826
   },
   "eda": {
+    "male": {
+      "label": "Sex (Male)",
+      "mean": 0.498,
+      "std": 0.5,
+      "min": 0.0,
+      "max": 1.0,
+      "median": 0.0
+    },
     "age": {
       "label": "Age",
-      "mean": 53.14,
-      "std": 14.198,
-      "min": 29.0,
-      "max": 77.0
+      "mean": 48.53,
+      "std": 7.981,
+      "min": 32.0,
+      "max": 70.0,
+      "median": 48.0
     },
-    "sex": {
-      "label": "Sex",
-      "mean": 0.476,
+    "education": {
+      "label": "Education Level",
+      "mean": 2.559,
+      "std": 1.037,
+      "min": 1.0,
+      "max": 4.0,
+      "median": 3.0
+    },
+    "currentSmoker": {
+      "label": "Current Smoker",
+      "mean": 0.485,
       "std": 0.5,
       "min": 0.0,
-      "max": 1.0
+      "max": 1.0,
+      "median": 0.0
     },
-    "cp": {
-      "label": "Chest Pain Type",
-      "mean": 1.479,
-      "std": 1.137,
+    "cigsPerDay": {
+      "label": "Cigarettes/Day",
+      "mean": 18.188,
+      "std": 9.763,
+      "min": 1.0,
+      "max": 50.0,
+      "median": 18.0
+    },
+    "BPMeds": {
+      "label": "BP Medication",
+      "mean": 0.029,
+      "std": 0.167,
       "min": 0.0,
-      "max": 3.0
+      "max": 1.0,
+      "median": 0.0
     },
-    "trestbps": {
-      "label": "Resting BP",
-      "mean": 147.006,
-      "std": 30.286,
-      "min": 94.0,
-      "max": 200.0
-    },
-    "chol": {
-      "label": "Cholesterol",
-      "mean": 346.016,
-      "std": 129.089,
-      "min": 126.0,
-      "max": 564.0
-    },
-    "fbs": {
-      "label": "Fasting Blood Sugar",
-      "mean": 0.519,
-      "std": 0.5,
+    "prevalentStroke": {
+      "label": "Prior Stroke",
+      "mean": 0.01,
+      "std": 0.099,
       "min": 0.0,
-      "max": 1.0
+      "max": 1.0,
+      "median": 0.0
     },
-    "restecg": {
-      "label": "Resting ECG",
-      "mean": 1.004,
-      "std": 0.818,
+    "prevalentHyp": {
+      "label": "Hypertension",
+      "mean": 0.322,
+      "std": 0.467,
       "min": 0.0,
-      "max": 2.0
+      "max": 1.0,
+      "median": 0.0
     },
-    "thalach": {
-      "label": "Max Heart Rate",
-      "mean": 137.383,
-      "std": 37.638,
-      "min": 71.0,
-      "max": 202.0
-    },
-    "exang": {
-      "label": "Exercise Angina",
-      "mean": 0.532,
-      "std": 0.499,
+    "diabetes": {
+      "label": "Diabetes",
+      "mean": 0.032,
+      "std": 0.177,
       "min": 0.0,
-      "max": 1.0
+      "max": 1.0,
+      "median": 0.0
     },
-    "oldpeak": {
-      "label": "ST Depression",
-      "mean": 3.126,
-      "std": 1.727,
-      "min": 0.0,
-      "max": 6.2
+    "totChol": {
+      "label": "Total Cholesterol",
+      "mean": 236.479,
+      "std": 43.605,
+      "min": 110.0,
+      "max": 380.0,
+      "median": 236.0
     },
-    "slope": {
-      "label": "ST Slope",
-      "mean": 1.022,
-      "std": 0.806,
-      "min": 0.0,
-      "max": 2.0
+    "sysBP": {
+      "label": "Systolic BP",
+      "mean": 123.135,
+      "std": 19.961,
+      "min": 90.0,
+      "max": 195.5,
+      "median": 122.6
     },
-    "ca": {
-      "label": "Major Vessels",
-      "mean": 1.951,
-      "std": 1.427,
-      "min": 0.0,
-      "max": 4.0
+    "diaBP": {
+      "label": "Diastolic BP",
+      "mean": 78.595,
+      "std": 12.285,
+      "min": 55.0,
+      "max": 122.9,
+      "median": 78.3
     },
-    "thal": {
-      "label": "Thalassemia",
-      "mean": 5.394,
-      "std": 1.704,
-      "min": 3.0,
-      "max": 7.0
+    "BMI": {
+      "label": "BMI",
+      "mean": 26.531,
+      "std": 4.451,
+      "min": 16.0,
+      "max": 41.4,
+      "median": 26.6
+    },
+    "heartRate": {
+      "label": "Heart Rate",
+      "mean": 74.576,
+      "std": 11.883,
+      "min": 44.0,
+      "max": 116.0,
+      "median": 75.0
+    },
+    "glucose": {
+      "label": "Glucose Level",
+      "mean": 82.29,
+      "std": 18.834,
+      "min": 50.0,
+      "max": 183.0,
+      "median": 81.0
     }
   },
   "age_dist": [
     {
-      "group": "20s",
-      "total": 16,
-      "disease": 5
-    },
-    {
       "group": "30s",
-      "total": 214,
-      "disease": 67
+      "total": 561,
+      "chd": 210
     },
     {
       "group": "40s",
-      "total": 208,
-      "disease": 75
+      "total": 1799,
+      "chd": 991
     },
     {
       "group": "50s",
-      "total": 212,
-      "disease": 98
+      "total": 1495,
+      "chd": 925
     },
     {
       "group": "60s",
-      "total": 199,
-      "disease": 144
+      "total": 359,
+      "chd": 266
     },
     {
       "group": "70s",
-      "total": 176,
-      "disease": 135
+      "total": 24,
+      "chd": 20
     }
   ],
   "correlation": {
-    "age": 0.3633,
-    "sex": 0.4476,
-    "cp": -0.2336,
-    "trestbps": 0.3017,
-    "chol": 0.2667,
-    "fbs": -0.0233,
-    "restecg": -0.024,
-    "thalach": 0.0052,
-    "exang": -0.018,
-    "oldpeak": 0.0224,
-    "slope": -0.0115,
-    "ca": 0.0434,
-    "thal": -0.0662
+    "male": 0.075,
+    "age": 0.1946,
+    "education": 0.0177,
+    "currentSmoker": 0.0994,
+    "cigsPerDay": 0.0609,
+    "BPMeds": -0.0111,
+    "prevalentStroke": 0.0053,
+    "prevalentHyp": 0.1476,
+    "diabetes": 0.0809,
+    "totChol": 0.1276,
+    "sysBP": 0.1584,
+    "diaBP": 0.0277,
+    "BMI": 0.0467,
+    "heartRate": 0.0245,
+    "glucose": 0.0582
   },
+  "smoke_dist": [
+    {
+      "smoker": 0,
+      "total": 2181,
+      "chd": 1137
+    },
+    {
+      "smoker": 1,
+      "total": 2057,
+      "chd": 1275
+    }
+  ],
+  "bp_dist": [
+    {
+      "category": "Stage 2",
+      "total": 865,
+      "chd": 582
+    },
+    {
+      "category": "Stage 1",
+      "total": 700,
+      "chd": 414
+    },
+    {
+      "category": "Normal",
+      "total": 1900,
+      "chd": 965
+    },
+    {
+      "category": "Elevated",
+      "total": 773,
+      "chd": 451
+    }
+  ],
   "models": [
     {
       "model": "Logistic Regression",
-      "auc": 0.9393,
-      "pr_auc": 0.9467,
-      "accuracy": 0.8225,
-      "f1": 0.822,
-      "precision": 0.8274,
-      "recall": 0.8225,
+      "auc": 0.6781,
+      "pr_auc": 0.7329,
+      "accuracy": 0.6269,
+      "f1": 0.585,
+      "precision": 0.6362,
+      "recall": 0.6269,
       "confusion": {
-        "tp": 66,
-        "tn": 73,
-        "fp": 10,
-        "fn": 20
+        "tp": 403,
+        "tn": 96,
+        "fp": 247,
+        "fn": 50
       }
     },
     {
       "model": "Random Forest",
-      "auc": 1.0,
-      "pr_auc": 1.0,
-      "accuracy": 1.0,
-      "f1": 1.0,
-      "precision": 1.0,
-      "recall": 1.0,
+      "auc": 0.6582,
+      "pr_auc": 0.7137,
+      "accuracy": 0.6231,
+      "f1": 0.6075,
+      "precision": 0.6171,
+      "recall": 0.6231,
       "confusion": {
-        "tp": 86,
-        "tn": 83,
-        "fp": 0,
-        "fn": 0
+        "tp": 358,
+        "tn": 138,
+        "fp": 205,
+        "fn": 95
       }
     },
     {
-      "model": "GBT",
-      "auc": 1.0,
-      "pr_auc": 1.0,
-      "accuracy": 1.0,
-      "f1": 1.0,
-      "precision": 1.0,
-      "recall": 1.0,
+      "model": "Gradient Boosted Trees",
+      "auc": 0.6299,
+      "pr_auc": 0.6885,
+      "accuracy": 0.5955,
+      "f1": 0.591,
+      "precision": 0.5901,
+      "recall": 0.5955,
       "confusion": {
-        "tp": 86,
-        "tn": 83,
-        "fp": 0,
-        "fn": 0
+        "tp": 314,
+        "tn": 160,
+        "fp": 183,
+        "fn": 139
       }
     }
   ],
@@ -201,226 +262,246 @@
       },
       {
         "fpr": 0.0,
-        "tpr": 0.0349
+        "tpr": 0.0287
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.0698
+        "fpr": 0.0029,
+        "tpr": 0.0552
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.1047
+        "fpr": 0.0117,
+        "tpr": 0.0773
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.1395
+        "fpr": 0.0175,
+        "tpr": 0.1015
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.1744
+        "fpr": 0.0262,
+        "tpr": 0.1236
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.2093
+        "fpr": 0.0379,
+        "tpr": 0.1435
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.2442
+        "fpr": 0.0554,
+        "tpr": 0.1589
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.2791
+        "fpr": 0.0641,
+        "tpr": 0.181
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.314
+        "fpr": 0.07,
+        "tpr": 0.2053
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.3488
+        "fpr": 0.0787,
+        "tpr": 0.2274
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.3837
+        "fpr": 0.0933,
+        "tpr": 0.245
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.4186
+        "fpr": 0.102,
+        "tpr": 0.2671
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.4535
+        "fpr": 0.1137,
+        "tpr": 0.287
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.4884
+        "fpr": 0.1224,
+        "tpr": 0.3091
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.5233
+        "fpr": 0.137,
+        "tpr": 0.3267
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.5581
+        "fpr": 0.1516,
+        "tpr": 0.3444
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.593
+        "fpr": 0.1603,
+        "tpr": 0.3664
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.6279
+        "fpr": 0.1749,
+        "tpr": 0.3841
       },
       {
-        "fpr": 0.0241,
-        "tpr": 0.6395
+        "fpr": 0.1924,
+        "tpr": 0.3996
       },
       {
-        "fpr": 0.0241,
-        "tpr": 0.6744
+        "fpr": 0.2012,
+        "tpr": 0.4216
       },
       {
-        "fpr": 0.0482,
-        "tpr": 0.686
+        "fpr": 0.2099,
+        "tpr": 0.4437
       },
       {
-        "fpr": 0.0602,
-        "tpr": 0.7093
+        "fpr": 0.2216,
+        "tpr": 0.4636
       },
       {
-        "fpr": 0.0843,
-        "tpr": 0.7209
+        "fpr": 0.242,
+        "tpr": 0.4768
       },
       {
-        "fpr": 0.0843,
-        "tpr": 0.7558
+        "fpr": 0.2536,
+        "tpr": 0.4967
       },
       {
-        "fpr": 0.1084,
-        "tpr": 0.7674
+        "fpr": 0.2682,
+        "tpr": 0.5143
       },
       {
-        "fpr": 0.1325,
-        "tpr": 0.7791
+        "fpr": 0.2915,
+        "tpr": 0.5254
       },
       {
-        "fpr": 0.1446,
-        "tpr": 0.8023
+        "fpr": 0.3032,
+        "tpr": 0.5453
       },
       {
-        "fpr": 0.1566,
-        "tpr": 0.8256
+        "fpr": 0.3207,
+        "tpr": 0.5607
       },
       {
-        "fpr": 0.1566,
-        "tpr": 0.8605
+        "fpr": 0.3324,
+        "tpr": 0.5806
       },
       {
-        "fpr": 0.1687,
-        "tpr": 0.8837
+        "fpr": 0.3499,
+        "tpr": 0.596
       },
       {
-        "fpr": 0.1807,
-        "tpr": 0.907
+        "fpr": 0.3673,
+        "tpr": 0.6115
       },
       {
-        "fpr": 0.2048,
-        "tpr": 0.9186
+        "fpr": 0.3819,
+        "tpr": 0.6291
       },
       {
-        "fpr": 0.2289,
-        "tpr": 0.9302
+        "fpr": 0.4023,
+        "tpr": 0.6424
       },
       {
-        "fpr": 0.2651,
-        "tpr": 0.9302
+        "fpr": 0.4198,
+        "tpr": 0.6578
       },
       {
-        "fpr": 0.2892,
-        "tpr": 0.9419
+        "fpr": 0.4286,
+        "tpr": 0.6799
       },
       {
-        "fpr": 0.3253,
-        "tpr": 0.9419
+        "fpr": 0.4402,
+        "tpr": 0.6998
       },
       {
-        "fpr": 0.3614,
-        "tpr": 0.9419
+        "fpr": 0.4606,
+        "tpr": 0.713
       },
       {
-        "fpr": 0.3735,
-        "tpr": 0.9651
+        "fpr": 0.4752,
+        "tpr": 0.7307
       },
       {
-        "fpr": 0.4096,
-        "tpr": 0.9651
+        "fpr": 0.484,
+        "tpr": 0.7528
       },
       {
-        "fpr": 0.4337,
-        "tpr": 0.9767
+        "fpr": 0.5044,
+        "tpr": 0.766
       },
       {
-        "fpr": 0.4578,
-        "tpr": 0.9884
+        "fpr": 0.5248,
+        "tpr": 0.7792
       },
       {
-        "fpr": 0.494,
-        "tpr": 0.9884
+        "fpr": 0.5452,
+        "tpr": 0.7925
       },
       {
-        "fpr": 0.5181,
-        "tpr": 1.0
+        "fpr": 0.5714,
+        "tpr": 0.8013
       },
       {
-        "fpr": 0.5542,
-        "tpr": 1.0
+        "fpr": 0.5889,
+        "tpr": 0.8168
       },
       {
-        "fpr": 0.5904,
-        "tpr": 1.0
+        "fpr": 0.6122,
+        "tpr": 0.8278
       },
       {
-        "fpr": 0.6265,
-        "tpr": 1.0
+        "fpr": 0.6297,
+        "tpr": 0.8433
       },
       {
-        "fpr": 0.6627,
-        "tpr": 1.0
+        "fpr": 0.6501,
+        "tpr": 0.8565
       },
       {
-        "fpr": 0.6988,
-        "tpr": 1.0
+        "fpr": 0.6735,
+        "tpr": 0.8675
       },
       {
-        "fpr": 0.7349,
-        "tpr": 1.0
+        "fpr": 0.7026,
+        "tpr": 0.8742
       },
       {
-        "fpr": 0.7711,
-        "tpr": 1.0
+        "fpr": 0.7201,
+        "tpr": 0.8896
       },
       {
-        "fpr": 0.8072,
-        "tpr": 1.0
+        "fpr": 0.7434,
+        "tpr": 0.9007
       },
       {
-        "fpr": 0.8434,
-        "tpr": 1.0
+        "fpr": 0.7697,
+        "tpr": 0.9095
       },
       {
-        "fpr": 0.8795,
-        "tpr": 1.0
+        "fpr": 0.793,
+        "tpr": 0.9205
       },
       {
-        "fpr": 0.9157,
-        "tpr": 1.0
+        "fpr": 0.8105,
+        "tpr": 0.936
       },
       {
-        "fpr": 0.9518,
-        "tpr": 1.0
+        "fpr": 0.828,
+        "tpr": 0.9514
       },
       {
-        "fpr": 0.988,
+        "fpr": 0.8484,
+        "tpr": 0.9647
+      },
+      {
+        "fpr": 0.8776,
+        "tpr": 0.9713
+      },
+      {
+        "fpr": 0.9096,
+        "tpr": 0.9757
+      },
+      {
+        "fpr": 0.9417,
+        "tpr": 0.9801
+      },
+      {
+        "fpr": 0.9621,
+        "tpr": 0.9934
+      },
+      {
+        "fpr": 0.9913,
         "tpr": 1.0
       },
       {
@@ -435,227 +516,247 @@
       },
       {
         "fpr": 0.0,
-        "tpr": 0.0349
+        "tpr": 0.0287
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.0698
+        "fpr": 0.0087,
+        "tpr": 0.0508
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.1047
+        "fpr": 0.0146,
+        "tpr": 0.0751
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.1395
+        "fpr": 0.0204,
+        "tpr": 0.0993
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.1744
+        "fpr": 0.0233,
+        "tpr": 0.1258
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.2093
+        "fpr": 0.0437,
+        "tpr": 0.1391
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.2442
+        "fpr": 0.0525,
+        "tpr": 0.1611
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.2791
+        "fpr": 0.0641,
+        "tpr": 0.181
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.314
+        "fpr": 0.0729,
+        "tpr": 0.2031
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.3488
+        "fpr": 0.0904,
+        "tpr": 0.2185
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.3837
+        "fpr": 0.1079,
+        "tpr": 0.234
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.4186
+        "fpr": 0.1224,
+        "tpr": 0.2517
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.4535
+        "fpr": 0.1312,
+        "tpr": 0.2737
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.4884
+        "fpr": 0.1429,
+        "tpr": 0.2936
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.5233
+        "fpr": 0.1516,
+        "tpr": 0.3157
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.5581
+        "fpr": 0.1633,
+        "tpr": 0.3355
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.593
+        "fpr": 0.1808,
+        "tpr": 0.351
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.6279
+        "fpr": 0.1924,
+        "tpr": 0.3709
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.6628
+        "fpr": 0.2099,
+        "tpr": 0.3863
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.6977
+        "fpr": 0.2216,
+        "tpr": 0.4062
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.7326
+        "fpr": 0.2332,
+        "tpr": 0.426
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.7674
+        "fpr": 0.2507,
+        "tpr": 0.4415
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.8023
+        "fpr": 0.2624,
+        "tpr": 0.4614
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.8372
+        "fpr": 0.2682,
+        "tpr": 0.4857
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.8721
+        "fpr": 0.2799,
+        "tpr": 0.5055
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.907
+        "fpr": 0.3032,
+        "tpr": 0.5166
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.9419
+        "fpr": 0.3294,
+        "tpr": 0.5254
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.9767
+        "fpr": 0.3382,
+        "tpr": 0.5475
       },
       {
-        "fpr": 0.012,
-        "tpr": 1.0
+        "fpr": 0.3586,
+        "tpr": 0.5607
       },
       {
-        "fpr": 0.0482,
-        "tpr": 1.0
+        "fpr": 0.3673,
+        "tpr": 0.5828
       },
       {
-        "fpr": 0.0843,
-        "tpr": 1.0
+        "fpr": 0.3819,
+        "tpr": 0.6004
       },
       {
-        "fpr": 0.1205,
-        "tpr": 1.0
+        "fpr": 0.3907,
+        "tpr": 0.6225
       },
       {
-        "fpr": 0.1566,
-        "tpr": 1.0
+        "fpr": 0.4023,
+        "tpr": 0.6424
       },
       {
-        "fpr": 0.1928,
-        "tpr": 1.0
+        "fpr": 0.4227,
+        "tpr": 0.6556
       },
       {
-        "fpr": 0.2289,
-        "tpr": 1.0
+        "fpr": 0.4402,
+        "tpr": 0.6711
       },
       {
-        "fpr": 0.2651,
-        "tpr": 1.0
+        "fpr": 0.4548,
+        "tpr": 0.6887
       },
       {
-        "fpr": 0.3012,
-        "tpr": 1.0
+        "fpr": 0.4752,
+        "tpr": 0.702
       },
       {
-        "fpr": 0.3373,
-        "tpr": 1.0
+        "fpr": 0.4956,
+        "tpr": 0.7152
       },
       {
-        "fpr": 0.3735,
-        "tpr": 1.0
+        "fpr": 0.516,
+        "tpr": 0.7285
       },
       {
-        "fpr": 0.4096,
-        "tpr": 1.0
+        "fpr": 0.5364,
+        "tpr": 0.7417
       },
       {
-        "fpr": 0.4458,
-        "tpr": 1.0
+        "fpr": 0.5569,
+        "tpr": 0.755
       },
       {
-        "fpr": 0.4819,
-        "tpr": 1.0
+        "fpr": 0.5685,
+        "tpr": 0.7748
       },
       {
-        "fpr": 0.5181,
-        "tpr": 1.0
+        "fpr": 0.5889,
+        "tpr": 0.7881
       },
       {
-        "fpr": 0.5542,
-        "tpr": 1.0
+        "fpr": 0.6122,
+        "tpr": 0.7991
       },
       {
-        "fpr": 0.5904,
-        "tpr": 1.0
+        "fpr": 0.6297,
+        "tpr": 0.8146
       },
       {
-        "fpr": 0.6265,
-        "tpr": 1.0
+        "fpr": 0.6414,
+        "tpr": 0.8344
       },
       {
-        "fpr": 0.6627,
-        "tpr": 1.0
+        "fpr": 0.6676,
+        "tpr": 0.8433
       },
       {
-        "fpr": 0.6988,
-        "tpr": 1.0
+        "fpr": 0.688,
+        "tpr": 0.8565
       },
       {
-        "fpr": 0.7349,
-        "tpr": 1.0
+        "fpr": 0.7085,
+        "tpr": 0.8698
       },
       {
-        "fpr": 0.7711,
-        "tpr": 1.0
+        "fpr": 0.7289,
+        "tpr": 0.883
       },
       {
-        "fpr": 0.8072,
-        "tpr": 1.0
+        "fpr": 0.7522,
+        "tpr": 0.894
       },
       {
-        "fpr": 0.8434,
-        "tpr": 1.0
+        "fpr": 0.7697,
+        "tpr": 0.9095
       },
       {
-        "fpr": 0.8795,
-        "tpr": 1.0
+        "fpr": 0.793,
+        "tpr": 0.9205
       },
       {
-        "fpr": 0.9157,
-        "tpr": 1.0
+        "fpr": 0.8105,
+        "tpr": 0.936
       },
       {
-        "fpr": 0.9518,
-        "tpr": 1.0
+        "fpr": 0.8251,
+        "tpr": 0.9536
       },
       {
-        "fpr": 0.988,
-        "tpr": 1.0
+        "fpr": 0.8484,
+        "tpr": 0.9647
+      },
+      {
+        "fpr": 0.8776,
+        "tpr": 0.9713
+      },
+      {
+        "fpr": 0.9067,
+        "tpr": 0.9779
+      },
+      {
+        "fpr": 0.93,
+        "tpr": 0.989
+      },
+      {
+        "fpr": 0.9563,
+        "tpr": 0.9978
+      },
+      {
+        "fpr": 0.9942,
+        "tpr": 0.9978
       },
       {
         "fpr": 1.0,
@@ -668,228 +769,248 @@
         "tpr": 0.0
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.0349
+        "fpr": 0.0058,
+        "tpr": 0.0243
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.0698
+        "fpr": 0.0146,
+        "tpr": 0.0464
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.1047
+        "fpr": 0.0204,
+        "tpr": 0.0706
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.1395
+        "fpr": 0.0233,
+        "tpr": 0.0971
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.1744
+        "fpr": 0.035,
+        "tpr": 0.117
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.2093
+        "fpr": 0.0379,
+        "tpr": 0.1435
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.2442
+        "fpr": 0.0525,
+        "tpr": 0.1611
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.2791
+        "fpr": 0.0671,
+        "tpr": 0.1788
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.314
+        "fpr": 0.0729,
+        "tpr": 0.2031
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.3488
+        "fpr": 0.0875,
+        "tpr": 0.2208
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.3837
+        "fpr": 0.0962,
+        "tpr": 0.2428
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.4186
+        "fpr": 0.1108,
+        "tpr": 0.2605
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.4535
+        "fpr": 0.1312,
+        "tpr": 0.2737
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.4884
+        "fpr": 0.1429,
+        "tpr": 0.2936
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.5233
+        "fpr": 0.1633,
+        "tpr": 0.3068
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.5581
+        "fpr": 0.1749,
+        "tpr": 0.3267
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.593
+        "fpr": 0.1953,
+        "tpr": 0.34
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.6279
+        "fpr": 0.207,
+        "tpr": 0.3598
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.6628
+        "fpr": 0.2128,
+        "tpr": 0.3841
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.6977
+        "fpr": 0.2245,
+        "tpr": 0.404
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.7326
+        "fpr": 0.2478,
+        "tpr": 0.415
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.7674
+        "fpr": 0.2682,
+        "tpr": 0.4283
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.8023
+        "fpr": 0.2857,
+        "tpr": 0.4437
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.8372
+        "fpr": 0.3061,
+        "tpr": 0.457
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.8721
+        "fpr": 0.3149,
+        "tpr": 0.479
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.907
+        "fpr": 0.3236,
+        "tpr": 0.5011
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.9419
+        "fpr": 0.3353,
+        "tpr": 0.521
       },
       {
-        "fpr": 0.0,
-        "tpr": 0.9767
+        "fpr": 0.3557,
+        "tpr": 0.5342
       },
       {
-        "fpr": 0.012,
-        "tpr": 1.0
+        "fpr": 0.3732,
+        "tpr": 0.5497
       },
       {
-        "fpr": 0.0482,
-        "tpr": 1.0
+        "fpr": 0.3878,
+        "tpr": 0.5673
       },
       {
-        "fpr": 0.0843,
-        "tpr": 1.0
+        "fpr": 0.4082,
+        "tpr": 0.5806
       },
       {
-        "fpr": 0.1205,
-        "tpr": 1.0
+        "fpr": 0.4257,
+        "tpr": 0.596
       },
       {
-        "fpr": 0.1566,
-        "tpr": 1.0
+        "fpr": 0.4461,
+        "tpr": 0.6093
       },
       {
-        "fpr": 0.1928,
-        "tpr": 1.0
+        "fpr": 0.4548,
+        "tpr": 0.6313
       },
       {
-        "fpr": 0.2289,
-        "tpr": 1.0
+        "fpr": 0.4781,
+        "tpr": 0.6424
       },
       {
-        "fpr": 0.2651,
-        "tpr": 1.0
+        "fpr": 0.4985,
+        "tpr": 0.6556
       },
       {
-        "fpr": 0.3012,
-        "tpr": 1.0
+        "fpr": 0.519,
+        "tpr": 0.6689
       },
       {
-        "fpr": 0.3373,
-        "tpr": 1.0
+        "fpr": 0.5306,
+        "tpr": 0.6887
       },
       {
-        "fpr": 0.3735,
-        "tpr": 1.0
+        "fpr": 0.5481,
+        "tpr": 0.7042
       },
       {
-        "fpr": 0.4096,
-        "tpr": 1.0
+        "fpr": 0.5714,
+        "tpr": 0.7152
       },
       {
-        "fpr": 0.4458,
-        "tpr": 1.0
+        "fpr": 0.5918,
+        "tpr": 0.7285
       },
       {
-        "fpr": 0.4819,
-        "tpr": 1.0
+        "fpr": 0.6035,
+        "tpr": 0.7483
       },
       {
-        "fpr": 0.5181,
-        "tpr": 1.0
+        "fpr": 0.6122,
+        "tpr": 0.7704
       },
       {
-        "fpr": 0.5542,
-        "tpr": 1.0
+        "fpr": 0.6297,
+        "tpr": 0.7859
       },
       {
-        "fpr": 0.5904,
-        "tpr": 1.0
+        "fpr": 0.6472,
+        "tpr": 0.8013
       },
       {
-        "fpr": 0.6265,
-        "tpr": 1.0
+        "fpr": 0.6706,
+        "tpr": 0.8124
       },
       {
-        "fpr": 0.6627,
-        "tpr": 1.0
+        "fpr": 0.6851,
+        "tpr": 0.83
       },
       {
-        "fpr": 0.6988,
-        "tpr": 1.0
+        "fpr": 0.7026,
+        "tpr": 0.8455
       },
       {
-        "fpr": 0.7349,
-        "tpr": 1.0
+        "fpr": 0.7289,
+        "tpr": 0.8543
       },
       {
-        "fpr": 0.7711,
-        "tpr": 1.0
+        "fpr": 0.7522,
+        "tpr": 0.8653
       },
       {
-        "fpr": 0.8072,
-        "tpr": 1.0
+        "fpr": 0.7638,
+        "tpr": 0.8852
       },
       {
-        "fpr": 0.8434,
-        "tpr": 1.0
+        "fpr": 0.7843,
+        "tpr": 0.8985
       },
       {
-        "fpr": 0.8795,
-        "tpr": 1.0
+        "fpr": 0.8134,
+        "tpr": 0.9051
       },
       {
-        "fpr": 0.9157,
-        "tpr": 1.0
+        "fpr": 0.8251,
+        "tpr": 0.9249
       },
       {
-        "fpr": 0.9518,
-        "tpr": 1.0
+        "fpr": 0.8426,
+        "tpr": 0.9404
       },
       {
-        "fpr": 0.988,
-        "tpr": 1.0
+        "fpr": 0.863,
+        "tpr": 0.9536
+      },
+      {
+        "fpr": 0.8892,
+        "tpr": 0.9625
+      },
+      {
+        "fpr": 0.9184,
+        "tpr": 0.9691
+      },
+      {
+        "fpr": 0.9388,
+        "tpr": 0.9823
+      },
+      {
+        "fpr": 0.965,
+        "tpr": 0.9912
+      },
+      {
+        "fpr": 0.9942,
+        "tpr": 0.9978
       },
       {
         "fpr": 1.0,
@@ -900,136 +1021,156 @@
   "feature_importance": {
     "Random Forest": [
       {
+        "feature": "Sex (Male)",
+        "key": "male",
+        "importance": 0.025269
+      },
+      {
         "feature": "Age",
         "key": "age",
-        "importance": 0.211058
+        "importance": 0.176271
       },
       {
-        "feature": "Sex",
-        "key": "sex",
-        "importance": 0.218206
+        "feature": "Education Level",
+        "key": "education",
+        "importance": 0.034111
       },
       {
-        "feature": "Chest Pain Type",
-        "key": "cp",
-        "importance": 0.098583
+        "feature": "Current Smoker",
+        "key": "currentSmoker",
+        "importance": 0.022583
       },
       {
-        "feature": "Resting BP",
-        "key": "trestbps",
-        "importance": 0.19018
+        "feature": "Cigarettes/Day",
+        "key": "cigsPerDay",
+        "importance": 0.0613
       },
       {
-        "feature": "Cholesterol",
-        "key": "chol",
-        "importance": 0.138364
+        "feature": "BP Medication",
+        "key": "BPMeds",
+        "importance": 0.003685
       },
       {
-        "feature": "Fasting Blood Sugar",
-        "key": "fbs",
-        "importance": 0.010137
+        "feature": "Prior Stroke",
+        "key": "prevalentStroke",
+        "importance": 0.00092
       },
       {
-        "feature": "Resting ECG",
-        "key": "restecg",
-        "importance": 0.009855
+        "feature": "Hypertension",
+        "key": "prevalentHyp",
+        "importance": 0.05365
       },
       {
-        "feature": "Max Heart Rate",
-        "key": "thalach",
-        "importance": 0.036701
+        "feature": "Diabetes",
+        "key": "diabetes",
+        "importance": 0.007732
       },
       {
-        "feature": "Exercise Angina",
-        "key": "exang",
-        "importance": 0.007736
+        "feature": "Total Cholesterol",
+        "key": "totChol",
+        "importance": 0.119923
       },
       {
-        "feature": "ST Depression",
-        "key": "oldpeak",
-        "importance": 0.034259
+        "feature": "Systolic BP",
+        "key": "sysBP",
+        "importance": 0.134754
       },
       {
-        "feature": "ST Slope",
-        "key": "slope",
-        "importance": 0.012449
+        "feature": "Diastolic BP",
+        "key": "diaBP",
+        "importance": 0.086727
       },
       {
-        "feature": "Major Vessels",
-        "key": "ca",
-        "importance": 0.018661
+        "feature": "BMI",
+        "key": "BMI",
+        "importance": 0.097733
       },
       {
-        "feature": "Thalassemia",
-        "key": "thal",
-        "importance": 0.013811
+        "feature": "Heart Rate",
+        "key": "heartRate",
+        "importance": 0.087304
+      },
+      {
+        "feature": "Glucose Level",
+        "key": "glucose",
+        "importance": 0.088036
       }
     ],
     "Gradient Boosted Trees": [
       {
+        "feature": "Sex (Male)",
+        "key": "male",
+        "importance": 0.021097
+      },
+      {
         "feature": "Age",
         "key": "age",
-        "importance": 0.219227
+        "importance": 0.117993
       },
       {
-        "feature": "Sex",
-        "key": "sex",
-        "importance": 0.194803
+        "feature": "Education Level",
+        "key": "education",
+        "importance": 0.0399
       },
       {
-        "feature": "Chest Pain Type",
-        "key": "cp",
-        "importance": 0.188355
+        "feature": "Current Smoker",
+        "key": "currentSmoker",
+        "importance": 0.017901
       },
       {
-        "feature": "Resting BP",
-        "key": "trestbps",
-        "importance": 0.181568
+        "feature": "Cigarettes/Day",
+        "key": "cigsPerDay",
+        "importance": 0.066295
       },
       {
-        "feature": "Cholesterol",
-        "key": "chol",
-        "importance": 0.174674
+        "feature": "BP Medication",
+        "key": "BPMeds",
+        "importance": 0.011956
       },
       {
-        "feature": "Fasting Blood Sugar",
-        "key": "fbs",
-        "importance": 0.000539
+        "feature": "Prior Stroke",
+        "key": "prevalentStroke",
+        "importance": 0.004776
       },
       {
-        "feature": "Resting ECG",
-        "key": "restecg",
-        "importance": 0.003016
+        "feature": "Hypertension",
+        "key": "prevalentHyp",
+        "importance": 0.015326
       },
       {
-        "feature": "Max Heart Rate",
-        "key": "thalach",
-        "importance": 0.017581
+        "feature": "Diabetes",
+        "key": "diabetes",
+        "importance": 0.005588
       },
       {
-        "feature": "Exercise Angina",
-        "key": "exang",
-        "importance": 3.9e-05
+        "feature": "Total Cholesterol",
+        "key": "totChol",
+        "importance": 0.121992
       },
       {
-        "feature": "ST Depression",
-        "key": "oldpeak",
-        "importance": 0.010696
+        "feature": "Systolic BP",
+        "key": "sysBP",
+        "importance": 0.119424
       },
       {
-        "feature": "ST Slope",
-        "key": "slope",
-        "importance": 0.000454
+        "feature": "Diastolic BP",
+        "key": "diaBP",
+        "importance": 0.113658
       },
       {
-        "feature": "Major Vessels",
-        "key": "ca",
-        "importance": 0.004398
+        "feature": "BMI",
+        "key": "BMI",
+        "importance": 0.120792
       },
       {
-        "feature": "Thalassemia",
-        "key": "thal",
-        "importance": 0.004649
+        "feature": "Heart Rate",
+        "key": "heartRate",
+        "importance": 0.103972
+      },
+      {
+        "feature": "Glucose Level",
+        "key": "glucose",
+        "importance": 0.119331
       }
     ]
   }
